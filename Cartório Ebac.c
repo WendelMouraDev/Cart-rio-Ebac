@@ -13,6 +13,7 @@ int registro()//Função responsável por registrar os usuários no sistema.
 	char cargo[40];
 	//Final da criação de variáveis.
 	
+	system("cls");
 	printf("digite o CPF a ser cadastrado: ");//Coletando informações do usuário.
 	scanf("%s", cpf);//%s serve para salvar uma string.
 	
@@ -55,6 +56,27 @@ int registro()//Função responsável por registrar os usuários no sistema.
 	file = fopen(arquivo, "a");//salvar os cargos no arquivo/abrir o arquivo.
 	fprintf(file,cargo);
 	fclose(file);
+	system("cls");
+	int escolha=1;
+	
+	while(escolha!=2)
+	{
+		printf("Usuário registrado com sucesso! Deseja continuar registrando?\n\n");
+		printf("\t1 - Continuar registrando!\n\n");
+		printf("\t2 - Voltar ao menu!\n\n");
+		scanf("%d",&escolha);
+	
+	switch(escolha)
+	{
+		case 1:
+		registro();
+		break;
+		
+		case 2:
+		main();
+		break;
+	}
+	}
 	
 	system("pause");
 
