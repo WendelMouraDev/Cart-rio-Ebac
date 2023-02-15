@@ -152,7 +152,7 @@ int main()//--------------------------------------------------------------------
 			break;
 			
 			case 4:
-			printf("Obrigado por utilizar o nosso sistema");
+			printf("Obrigado por utilizar o nosso sistema!");
 			return 0;
 			break;
 			
